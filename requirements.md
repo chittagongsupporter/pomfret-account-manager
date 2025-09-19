@@ -3,49 +3,53 @@
 ## 1. Introduction
 - **Project Name:** Pomfret Account Manager  
 - **Document Purpose:** Define the functional and non-functional requirements of the system.  
-  These requirements are derived from the vision and stakeholder concerns.  
-- **Version & Date:** v0.1 — [2025-09-19]  
+  Requirements are based on the lightweight Python architecture with CLI and local file storage.  
+- **Version & Date:** v0.2 — [2025-09-19]  
 
 ---
 
 ## 2. System Overview
-Pomfret Account Manager is a web-based application designed to provide a unified and intuitive interface for managing user accounts. The system will allow users to add, remove, and edit accounts quickly and securely, with a focus on simplicity and usability.  
+Pomfret Account Manager will be a standalone Python application that runs locally.  
+It will provide a command-line interface (CLI) where users can add, edit, remove, and list accounts.  
+All account data will be stored securely in local files with basic encryption.  
 
 ---
 
 ## 3. Functional Requirements
-| ID   | Requirement Description                                   | Priority |
-|------|-----------------------------------------------------------|----------|
-| FR-1 | Users can add new accounts with minimal input fields.     | High     |
-| FR-2 | Users can edit account details (e.g., name, metadata).    | High     |
-| FR-3 | Users can remove accounts quickly and safely.             | High     |
-| FR-4 | System must authenticate users before granting access.    | High     |
-| FR-5 | Display an organized list of all accounts.                | Medium   |
+| ID   | Requirement Description                                | Priority |
+|------|--------------------------------------------------------|----------|
+| FR-1 | User can add new accounts via CLI.                     | High     |
+| FR-2 | User can edit details of existing accounts.             | High     |
+| FR-3 | User can remove accounts.                               | High     |
+| FR-4 | User can view a list of all accounts.                   | Medium   |
+| FR-5 | Data is saved automatically to a local file.            | High     |
+| FR-6 | System authenticates user before granting access.       | Medium   |
 
 ---
 
 ## 4. Non-Functional Requirements
-| Category       | Requirement Example                                          |
-|----------------|--------------------------------------------------------------|
-| Usability      | 90% of users can complete add/remove/edit in <30 seconds.    |
-| Security       | All account data encrypted in transit and at rest.           |
-| Reliability    | 99% uptime target.                                           |
-| Performance    | Handle at least 500 accounts without noticeable lag.         |
-| Maintainability | Source code is modular and well-documented.                 |
+| Category       | Requirement Example                                    |
+|----------------|--------------------------------------------------------|
+| Usability      | CLI commands are intuitive and documented in `--help`. |
+| Security       | Accounts file is encrypted locally.                    |
+| Reliability    | No data loss after unexpected shutdowns.               |
+| Performance    | Handle up to 500 accounts with instant response times. |
+| Maintainability | Clear, modular Python code with docstrings.           |
 
 ---
 
 ## 5. Constraints & Assumptions
-- Web-only for initial release; mobile-native excluded.  
-- Developed and tested by a single contributor.  
-- Accounts managed are limited to metadata (not full credentials).  
+- No external database or API usage — local storage only.  
+- Runs with plain Python (minimal dependencies).  
+- Encryption depends on Python standard library or one lightweight package.  
+- Single-user system (no multi-user support).  
 
 ---
 
 ## 6. Next Steps
-This specification will guide:  
-1. **Architecture & Design (`architecture.md`)** — defining how requirements map to system structure.  
-2. **Implementation & Testing** — building features to meet these requirements.  
+This specification provides the foundation for:  
+1. **Architecture & Design (`architecture.md`)** — ensuring the CLI and file-based modules are well-structured.  
+2. **Implementation & Testing** — building and validating the Python modules.  
 
 ---
 
@@ -57,4 +61,4 @@ This specification will guide:
 
 - **External References**  
   - IEEE Std 830-1998: IEEE Recommended Practice for Software Requirements Specifications  
-  - ISO/IEC/IEEE 29148:2018 — Requirements Engineering Standard  
+  - Python Standard Library (argparse, json, csv, pathlib, hashlib)  
