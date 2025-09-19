@@ -2,20 +2,35 @@
 
 ## 1. Introduction
 - **Project Name:** Pomfret Account Manager  
-- **Document Purpose:** Define the functional and non-functional requirements of the system.  
-  Requirements are based on the lightweight Python architecture with CLI and local file storage.  
-- **Version & Date:** v0.2 — [2025-09-19]  
+- **Document Purpose:** Define functional and non-functional requirements of the system.  
+  Incorporates stakeholder analysis to ensure alignment with user needs.  
+- **Version & Date:** v0.3 — [2025-09-19]  
 
 ---
 
-## 2. System Overview
+## 2. Stakeholder Overview
+- **Primary Stakeholders:**  
+  - End users who want a simple way to add, remove, or edit accounts locally.  
+  - Product owner (myself), responsible for scope and delivery.  
+
+- **Secondary Stakeholders:**  
+  - Developers and testers (myself in multiple roles).  
+  - Future maintainers who may adapt the codebase.  
+
+- **Key Beneficiaries:**  
+  - End users — reduced friction in managing accounts without complexity.  
+  - Myself — gaining practical efficiency and ownership of a lightweight solution.  
+
+---
+
+## 3. System Overview
 Pomfret Account Manager will be a standalone Python application that runs locally.  
 It will provide a command-line interface (CLI) where users can add, edit, remove, and list accounts.  
 All account data will be stored securely in local files with basic encryption.  
 
 ---
 
-## 3. Functional Requirements
+## 4. Functional Requirements
 | ID   | Requirement Description                                | Priority |
 |------|--------------------------------------------------------|----------|
 | FR-1 | User can add new accounts via CLI.                     | High     |
@@ -27,7 +42,7 @@ All account data will be stored securely in local files with basic encryption.
 
 ---
 
-## 4. Non-Functional Requirements
+## 5. Non-Functional Requirements
 | Category       | Requirement Example                                    |
 |----------------|--------------------------------------------------------|
 | Usability      | CLI commands are intuitive and documented in `--help`. |
@@ -38,7 +53,7 @@ All account data will be stored securely in local files with basic encryption.
 
 ---
 
-## 5. Constraints & Assumptions
+## 6. Constraints & Assumptions
 - No external database or API usage — local storage only.  
 - Runs with plain Python (minimal dependencies).  
 - Encryption depends on Python standard library or one lightweight package.  
@@ -46,7 +61,7 @@ All account data will be stored securely in local files with basic encryption.
 
 ---
 
-## 6. Next Steps
+## 7. Next Steps
 This specification provides the foundation for:  
 1. **Architecture & Design (`architecture.md`)** — ensuring the CLI and file-based modules are well-structured.  
 2. **Implementation & Testing** — building and validating the Python modules.  
@@ -56,7 +71,6 @@ This specification provides the foundation for:
 ## References
 - **Internal Documentation**  
   - [Vision Document](./vision.md)  
-  - [Stakeholders Analysis](./stakeholders-analysis.md)  
   - [Architecture Overview](./architecture.md)  
 
 - **External References**  
